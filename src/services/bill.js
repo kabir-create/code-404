@@ -1,52 +1,32 @@
 const Bill = require("../models/Bill");
 const Participant = require("../models/Participant");
+const { v4: uuid } = require("uuid");
 
 /**
- * Create a new bill and initialize participants as DUE
+ * Create bill (PostgreSQL)
  */
 exports.createBill = async ({ tableNo, totalAmount, numberOfUsers }) => {
+  const groupCode = uuid();
   const splitAmount = totalAmount / numberOfUsers;
 
-  const bill = await Bill.create({
+  return Bill.createBill({
     tableNo,
     totalAmount,
     splitAmount,
-    status: "OPEN"
+    groupCode
   });
-
-  return bill;
 };
 
 /**
- * Fetch bill with participants summary
+ * Fetch bill + participants using groupCode (QR flow)
  */
-exports.getBillWithParticipants = async (billId) => {
-  const bill = await Bill.findById(billId);
+exports.getBillWithParticipants = async (groupCode) => {
+  const bill = await Bill.getBillByGroupCode(groupCode);
   if (!bill) {
     throw new Error("Bill not found");
   }
 
-  const participants = await Participant.find({ billId });
+  const participants = await Participant.getByGroupCode(groupCode);
 
-  return {
-    bill,
-    participants
-  };
-};
-
-/**
- * Close bill if all participants are PAID
- */
-exports.autoCloseBillIfSettled = async (billId) => {
-  const unpaid = await Participant.countDocuments({
-    billId,
-    status: "DUE"
-  });
-
-  if (unpaid === 0) {
-    await Bill.findByIdAndUpdate(billId, { status: "CLOSED" });
-    return true;
-  }
-
-  return false;
+  return { bill, participants };
 };

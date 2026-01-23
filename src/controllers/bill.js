@@ -29,7 +29,7 @@ exports.createBill = async (req, res) => {
  */
 exports.getBill = async (req, res) => {
   const { groupCode } = req.params;
-
+  console.log("Fetching bill for groupCode:", groupCode);
   const data = await billService.getBillWithParticipants(groupCode);
 
   res.json({
