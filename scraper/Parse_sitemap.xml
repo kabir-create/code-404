@@ -1,0 +1,11 @@
+def parse_sitemap(self):
+    response = self.session.get("https://www.eazydiner.com/sitemap.xml")
+    soup = BeautifulSoup(response.content, "xml")
+
+    urls = [loc.text for loc in soup.find_all("loc")]
+    restaurant_urls = [
+        u for u in urls
+        if "/restaurants" not in u and u.count("/") >= 4
+    ]
+
+    return restaurant_urls

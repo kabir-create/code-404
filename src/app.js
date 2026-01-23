@@ -9,6 +9,8 @@ app.use(cors({
   credentials: true
 }));
 
+
+
 app.use(express.json());
 
 connectDB();
@@ -17,4 +19,12 @@ app.use("/auth", require("./routes/auth"));
 app.use("/bill", require("./routes/bill"));
 app.use("/payment", require("./routes/payment"));
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(3000, () => {
+  console.log("🚀 Server running on port 3000");
+  console.log("📡 Endpoints:");
+  console.log("   - GET  /restaurants/cities");
+  console.log("   - GET  /restaurants/city/:citySlug");
+  console.log("   - GET  /restaurants/:restaurantId");
+  console.log("   - POST /bill/create");
+  console.log("   - POST /payment/confirm");
+});

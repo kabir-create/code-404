@@ -1,0 +1,51 @@
+name,slug,url,location,cuisine,rating,price_range,image_url,phone,address,city,city_slug
+Punjabi By Nature,punjabi-by-nature,https://www.eazydiner.com/delhi/punjabi-by-nature,Connaught Place,"North Indian, Punjabi",4.3,₹₹₹,,,"Connaught Place, Delhi",Delhi,delhi
+Saravana Bhavan,saravana-bhavan,https://www.eazydiner.com/delhi/saravana-bhavan,Connaught Place,South Indian,4.1,₹₹,,,"Connaught Place, Delhi",Delhi,delhi
+Cafe Delhi Heights,cafe-delhi-heights,https://www.eazydiner.com/delhi/cafe-delhi-heights,Hauz Khas,"Continental, Italian",4.4,₹₹,,,"Hauz Khas, Delhi",Delhi,delhi
+Karim's,karims,https://www.eazydiner.com/delhi/karim's,Jama Masjid,"Mughlai, North Indian",4.5,₹₹,,,"Jama Masjid, Delhi",Delhi,delhi
+Indian Accent,indian-accent,https://www.eazydiner.com/delhi/indian-accent,Lodhi Road,Modern Indian,4.7,₹₹₹₹,,,"Lodhi Road, Delhi",Delhi,delhi
+Bukhara,bukhara,https://www.eazydiner.com/delhi/bukhara,Chanakyapuri,North Indian,4.6,₹₹₹₹,,,"Chanakyapuri, Delhi",Delhi,delhi
+Moti Mahal,moti-mahal,https://www.eazydiner.com/delhi/moti-mahal,Daryaganj,Mughlai,4.2,₹₹₹,,,"Daryaganj, Delhi",Delhi,delhi
+Olive Bar & Kitchen,olive-bar-and-kitchen,https://www.eazydiner.com/delhi/olive-bar-&-kitchen,Mehrauli,Mediterranean,4.3,₹₹₹,,,"Mehrauli, Delhi",Delhi,delhi
+Farzi Cafe,farzi-cafe,https://www.eazydiner.com/delhi/farzi-cafe,Connaught Place,Modern Indian,4.4,₹₹₹,,,"Connaught Place, Delhi",Delhi,delhi
+Social,social,https://www.eazydiner.com/delhi/social,Hauz Khas,"Continental, Asian",4.2,₹₹,,,"Hauz Khas, Delhi",Delhi,delhi
+Trishna,trishna,https://www.eazydiner.com/mumbai/trishna,Fort,"Seafood, Coastal",4.6,₹₹₹₹,,,"Fort, Mumbai",Mumbai,mumbai
+Britannia & Co,britannia-and-co,https://www.eazydiner.com/mumbai/britannia-&-co,Ballard Estate,"Parsi, Iranian",4.5,₹₹,,,"Ballard Estate, Mumbai",Mumbai,mumbai
+The Bombay Canteen,the-bombay-canteen,https://www.eazydiner.com/mumbai/the-bombay-canteen,Lower Parel,Modern Indian,4.7,₹₹₹,,,"Lower Parel, Mumbai",Mumbai,mumbai
+Bademiya,bademiya,https://www.eazydiner.com/mumbai/bademiya,Colaba,"Mughlai, Kebabs",4.3,₹₹,,,"Colaba, Mumbai",Mumbai,mumbai
+Gajalee,gajalee,https://www.eazydiner.com/mumbai/gajalee,Vile Parle,Seafood,4.4,₹₹₹,,,"Vile Parle, Mumbai",Mumbai,mumbai
+Wasabi by Morimoto,wasabi-by-morimoto,https://www.eazydiner.com/mumbai/wasabi-by-morimoto,Lower Parel,Japanese,4.6,₹₹₹₹,,,"Lower Parel, Mumbai",Mumbai,mumbai
+Bastian,bastian,https://www.eazydiner.com/mumbai/bastian,Bandra,Seafood,4.5,₹₹₹₹,,,"Bandra, Mumbai",Mumbai,mumbai
+Cafe Mondegar,cafe-mondegar,https://www.eazydiner.com/mumbai/cafe-mondegar,Colaba,Continental,4.2,₹₹,,,"Colaba, Mumbai",Mumbai,mumbai
+Soam,soam,https://www.eazydiner.com/mumbai/soam,Bandra,"Gujarati, Rajasthani",4.4,₹₹₹,,,"Bandra, Mumbai",Mumbai,mumbai
+Masala Library,masala-library,https://www.eazydiner.com/mumbai/masala-library,Bandra Kurla Complex,Modern Indian,4.6,₹₹₹₹,,,"Bandra Kurla Complex, Mumbai",Mumbai,mumbai
+Karavalli,karavalli,https://www.eazydiner.com/bangalore/karavalli,Vittal Mallya Road,"Coastal, South Indian",4.6,₹₹₹₹,,,"Vittal Mallya Road, Bangalore",Bangalore,bangalore
+Vidyarthi Bhavan,vidyarthi-bhavan,https://www.eazydiner.com/bangalore/vidyarthi-bhavan,Basavanagudi,South Indian,4.3,₹,,,"Basavanagudi, Bangalore",Bangalore,bangalore
+Toit,toit,https://www.eazydiner.com/bangalore/toit,Indiranagar,"Continental, Brewery",4.5,₹₹₹,,,"Indiranagar, Bangalore",Bangalore,bangalore
+MTR,mtr,https://www.eazydiner.com/bangalore/mtr,Lalbagh Road,South Indian,4.2,₹₹,,,"Lalbagh Road, Bangalore",Bangalore,bangalore
+Koshy's,koshys,https://www.eazydiner.com/bangalore/koshy's,MG Road,"Continental, Indian",4.1,₹₹,,,"MG Road, Bangalore",Bangalore,bangalore
+Rim Naam,rim-naam,https://www.eazydiner.com/bangalore/rim-naam,MG Road,Thai,4.5,₹₹₹₹,,,"MG Road, Bangalore",Bangalore,bangalore
+Truffles,truffles,https://www.eazydiner.com/bangalore/truffles,Koramangala,"American, Burgers",4.4,₹₹,,,"Koramangala, Bangalore",Bangalore,bangalore
+The Only Place,the-only-place,https://www.eazydiner.com/bangalore/the-only-place,Museum Road,"Continental, Steaks",4.3,₹₹₹,,,"Museum Road, Bangalore",Bangalore,bangalore
+Barbeque Nation,barbeque-nation,https://www.eazydiner.com/bangalore/barbeque-nation,Multiple Outlets,"Multi-Cuisine, BBQ",4.2,₹₹₹,,,"Multiple Outlets, Bangalore",Bangalore,bangalore
+Fatty Bao,fatty-bao,https://www.eazydiner.com/bangalore/fatty-bao,Indiranagar,"Asian, Fusion",4.4,₹₹₹,,,"Indiranagar, Bangalore",Bangalore,bangalore
+Malaka Spice,malaka-spice,https://www.eazydiner.com/pune/malaka-spice,Koregaon Park,"Asian, Thai",4.5,₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+Vaishali,vaishali,https://www.eazydiner.com/pune/vaishali,FC Road,South Indian,4.2,₹₹,,,"FC Road, Pune",Pune,pune
+Arthur's Theme,arthurs-theme,https://www.eazydiner.com/pune/arthur's-theme,Koregaon Park,Continental,4.3,₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+Shabree,shabree,https://www.eazydiner.com/pune/shabree,Multiple Outlets,Maharashtrian,4.4,₹₹,,,"Multiple Outlets, Pune",Pune,pune
+German Bakery,german-bakery,https://www.eazydiner.com/pune/german-bakery,Koregaon Park,"Continental, Bakery",4.1,₹₹,,,"Koregaon Park, Pune",Pune,pune
+Swig,swig,https://www.eazydiner.com/pune/swig,Koregaon Park,Multi-Cuisine,4.3,₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+Paasha,paasha,https://www.eazydiner.com/pune/paasha,Koregaon Park,North Indian,4.5,₹₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+The Urban Foundry,the-urban-foundry,https://www.eazydiner.com/pune/the-urban-foundry,Baner,Continental,4.4,₹₹₹,,,"Baner, Pune",Pune,pune
+Terttulia,terttulia,https://www.eazydiner.com/pune/terttulia,Koregaon Park,European,4.2,₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+High Spirits,high-spirits,https://www.eazydiner.com/pune/high-spirits,Koregaon Park,Multi-Cuisine,4.3,₹₹₹,,,"Koregaon Park, Pune",Pune,pune
+Paradise,paradise,https://www.eazydiner.com/hyderabad/paradise,Secunderabad,"Biryani, Mughlai",4.4,₹₹,,,"Secunderabad, Hyderabad",Hyderabad,hyderabad
+Bawarchi,bawarchi,https://www.eazydiner.com/hyderabad/bawarchi,RTC Cross Roads,"Biryani, North Indian",4.3,₹₹,,,"RTC Cross Roads, Hyderabad",Hyderabad,hyderabad
+Shah Ghouse,shah-ghouse,https://www.eazydiner.com/hyderabad/shah-ghouse,Tolichowki,"Biryani, Mughlai",4.2,₹₹,,,"Tolichowki, Hyderabad",Hyderabad,hyderabad
+Chutneys,chutneys,https://www.eazydiner.com/hyderabad/chutneys,Banjara Hills,South Indian,4.1,₹₹,,,"Banjara Hills, Hyderabad",Hyderabad,hyderabad
+Ohri's,ohris,https://www.eazydiner.com/hyderabad/ohri's,Multiple Outlets,Multi-Cuisine,4.3,₹₹₹,,,"Multiple Outlets, Hyderabad",Hyderabad,hyderabad
+Flechazo,flechazo,https://www.eazydiner.com/hyderabad/flechazo,Jubilee Hills,"Spanish, Continental",4.5,₹₹₹₹,,,"Jubilee Hills, Hyderabad",Hyderabad,hyderabad
+Absolute Barbecues,absolute-barbecues,https://www.eazydiner.com/hyderabad/absolute-barbecues,Multiple Outlets,"BBQ, Multi-Cuisine",4.4,₹₹₹,,,"Multiple Outlets, Hyderabad",Hyderabad,hyderabad
+Minerva Coffee Shop,minerva-coffee-shop,https://www.eazydiner.com/hyderabad/minerva-coffee-shop,Multiple Outlets,South Indian,4.2,₹₹,,,"Multiple Outlets, Hyderabad",Hyderabad,hyderabad
+Jewel of Nizam,jewel-of-nizam,https://www.eazydiner.com/hyderabad/jewel-of-nizam,Falaknuma Palace,Hyderabadi,4.5,₹₹₹₹,,,"Falaknuma Palace, Hyderabad",Hyderabad,hyderabad
+Over The Moon,over-the-moon,https://www.eazydiner.com/hyderabad/over-the-moon,Banjara Hills,Continental,4.3,₹₹₹,,,"Banjara Hills, Hyderabad",Hyderabad,hyderabad
