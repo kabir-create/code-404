@@ -1,12 +1,12 @@
 const paymentService = require("../services/payment.js");
 
 exports.confirmPayment = async (req, res) => {
-  const { billId, participantId, payerName } = req.body;
+  const { groupCode, participantId, payerPhone, payerName } = req.body;
 
   const result = await paymentService.payForParticipant({
-    billId,
+    groupCode,
     participantId,
-    payerPhone: req.user.phone,
+    payerPhone,
     payerName,
     idempotencyKey: req.idempotencyKey
   });

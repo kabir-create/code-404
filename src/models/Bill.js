@@ -21,3 +21,11 @@ exports.getBillByGroupCode = async (groupCode) => {
 
   return rows[0];
 };
+
+exports.getBillById = async (billId) => {
+  const { rows } = await pool.query(
+    `SELECT * FROM bills WHERE id = $1`,
+    [billId]
+  );
+  return rows[0];
+};

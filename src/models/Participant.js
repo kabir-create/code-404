@@ -1,28 +1,49 @@
 const { pool } = require("../config/db");
 
-exports.createParticipant = async ({ billId, groupCode, phone, name }) => {
+exports.createParticipant = async ({ id, groupCode, phone, name }) => {
   const { rows } = await pool.query(
-    `INSERT INTO participants (bill_id, group_code, phone, name, status)
-     VALUES ($1,$2,$3,$4,'DUE')
-     RETURNING *`,
-    [billId, groupCode, phone, name]
+    `
+    INSERT INTO participants (id, group_code, phone, name, status)
+    VALUES ($1,$2,$3,$4,'DUE')
+    RETURNING *
+    `,
+    [id, groupCode, phone, name]
+  );
+  return rows[0];
+};
+
+/**
+ * 🔹 REQUIRED for payment flow
+ */
+exports.findByBillAndPhone = async (billId, phone) => {
+  const { rows } = await pool.query(
+    `
+    SELECT * FROM participants
+    WHERE bill_id = $1 AND phone = $2
+    `,
+    [billId, phone]
   );
   return rows[0];
 };
 
 exports.markPaid = async (participantId) => {
   await pool.query(
-    `UPDATE participants
-     SET status='PAID', paid_at=NOW()
-     WHERE id=$1`,
+    `
+    UPDATE participants
+    SET status='PAID', paid_at=NOW()
+    WHERE id=$1
+    `,
     [participantId]
   );
 };
+
 exports.getByGroupCode = async (groupCode) => {
   const { rows } = await pool.query(
-    `SELECT * FROM participants WHERE group_code=$1`,
+    `
+    SELECT * FROM participants
+    WHERE group_code=$1
+    `,
     [groupCode]
   );
   return rows;
 };
-

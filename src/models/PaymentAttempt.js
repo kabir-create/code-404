@@ -1,16 +1,29 @@
 const { pool } = require("../config/db");
 
-exports.createPayment = async ({
-  billId,
-  payerPhone,
-  payerName,
-  paidForParticipantId,
-  idempotencyKey
-}) => {
+/**
+ * Used ONLY for idempotency protection
+ */
+exports.findByKey = async (idempotencyKey) => {
+  const { rows } = await pool.query(
+    `
+    SELECT id
+    FROM payment_attempts
+    WHERE idempotency_key = $1
+    `,
+    [idempotencyKey]
+  );
+
+  return rows[0];
+};
+
+exports.create = async ({ idempotencyKey, participantId, status }) => {
   await pool.query(
-    `INSERT INTO payments
-     (bill_id, payer_phone, payer_name, paid_for_participant_id, idempotency_key)
-     VALUES ($1,$2,$3,$4,$5)`,
-    [billId, payerPhone, payerName, paidForParticipantId, idempotencyKey]
+    `
+    INSERT INTO payment_attempts
+      (idempotency_key, participant_id, status)
+    VALUES
+      ($1, $2, $3)
+    `,
+    [idempotencyKey, participantId, status]
   );
 };
