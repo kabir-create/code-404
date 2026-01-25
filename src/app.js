@@ -18,6 +18,7 @@ connectDB();
 app.use("/auth", require("./routes/auth"));
 app.use("/bill", require("./routes/bill"));
 app.use("/payment", require("./routes/payment"));
+app.use("/restaurants", require("./routes/restaurant"));
 
 app.listen(3000, () => {
   console.log("🚀 Server running on port 3000");

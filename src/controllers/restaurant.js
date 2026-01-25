@@ -1,4 +1,4 @@
-const restaurantService = require("../services/restaurant.service");
+const restaurantService = require("../services/Restaurant.js");
 
 exports.getCities = async (req, res) => {
   try {
