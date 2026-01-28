@@ -15,10 +15,10 @@ app.use(express.json());
 
 connectDB();
 
-app.use("/auth", require("./routes/auth"));
+//app.use("/auth", require("./routes/auth"));
 app.use("/bill", require("./routes/bill"));
 app.use("/payment", require("./routes/payment"));
-app.use("/restaurants", require("./routes/restaurant"));
+app.use("/restaurants", require("./routes/Restaurant"));
 
 app.listen(3000, () => {
   console.log("🚀 Server running on port 3000");

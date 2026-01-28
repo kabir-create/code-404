@@ -2,13 +2,14 @@ const phoneRegex = /^[0-9]{10}$/;
 const nameRegex = /^[A-Za-z ]+$/;
 
 exports.validatePhone = (req, res, next) => {
-  const phone = req.user?.phone || req.body.phone;
+  const phone = String(req.body.payerPhone || "").trim();
 
-  if (!phoneRegex.test(phone)) {
+  if (!/^\d{10}$/.test(phone)) {
     return res.status(400).json({
       message: "Phone number must be exactly 10 digits"
     });
   }
+
   next();
 };
 

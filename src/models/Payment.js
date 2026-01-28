@@ -1,11 +1,12 @@
 const { pool } = require("../config/db");
 
 exports.createPayment = async ({
-  id,
+  billId,
   payerPhone,
   payerName,
   paidForParticipantId,
-  idempotencyKey
+  idempotencyKey,
+  restaurantId
 }) => {
   await pool.query(
     `
@@ -15,17 +16,19 @@ exports.createPayment = async ({
         payer_phone,
         payer_name,
         paid_for_participant_id,
-        idempotency_key
+        idempotency_key,
+        restaurant_id
       )
     VALUES
-      ($1, $2, $3, $4, $5)
+      ($1, $2, $3, $4, $5, $6)
     `,
     [
       billId,
       payerPhone,
       payerName,
       paidForParticipantId,
-      idempotencyKey
+      idempotencyKey,
+      restaurantId
     ]
   );
 };

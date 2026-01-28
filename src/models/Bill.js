@@ -1,17 +1,33 @@
 const { pool } = require("../config/db");
 
-exports.createBill = async ({ tableNo, totalAmount, splitAmount, groupCode }) => {
+exports.createBill = async ({
+  restaurantId,
+  tableNo,
+  totalAmount,
+  numberOfUsers,
+  groupCode
+}) => {
+  const splitAmount = Math.ceil(totalAmount / numberOfUsers);
+
   const { rows } = await pool.query(
     `
-    INSERT INTO bills (restaurant_id,table_no, total_amount, split_amount, group_code, status)
+    INSERT INTO bills (
+      restaurant_id,
+      table_no,
+      total_amount,
+      split_amount,
+      group_code,
+      status
+    )
     VALUES ($1, $2, $3, $4, $5, 'OPEN')
     RETURNING *
     `,
-    [restaurantId,tableNo, totalAmount, splitAmount, groupCode]
+    [restaurantId, tableNo, totalAmount, splitAmount, groupCode]
   );
 
   return rows[0];
 };
+
 
 exports.getBillByGroupCode = async (groupCode) => {
   const { rows } = await pool.query(

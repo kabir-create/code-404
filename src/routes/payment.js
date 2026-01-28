@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const auth = require("../middleware/auth.js");
+//const auth = require("../middleware/auth.js");
 const idempotency = require("../middleware/idempotency.js");
 const {
   validatePhone,
@@ -17,7 +17,7 @@ const {
  */
 router.post(
   "/confirm",
-  auth,
+  //auth,
   validatePhone,
   validateName,
   idempotency,
@@ -29,7 +29,7 @@ router.post(
  */
 router.post(
   "/decline",
-  auth,
+ // auth,
   validatePhone,
   declinePayment
 );

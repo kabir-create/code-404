@@ -1,16 +1,25 @@
 const { pool } = require("../config/db");
 
-exports.createParticipant = async ({ id, groupCode, phone, name }) => {
+exports.createParticipant = async ({
+  billId,
+  groupCode,
+  phone,
+  name,
+  restaurantId
+}) => {
   const { rows } = await pool.query(
     `
-    INSERT INTO participants (id, group_code, phone, name, status)
-    VALUES ($1,$2,$3,$4,'DUE')
+    INSERT INTO participants
+      (bill_id, group_code, phone, name, status, restaurant_id)
+    VALUES
+      ($1, $2, $3, $4, 'DUE', $5)
     RETURNING *
     `,
-    [id, groupCode, phone, name]
+    [billId, groupCode, phone, name, restaurantId]
   );
   return rows[0];
 };
+
 
 /**
  * 🔹 REQUIRED for payment flow
@@ -36,6 +45,19 @@ exports.markPaid = async (participantId) => {
     [participantId]
   );
 };
+exports.getByBillId = async (billId) => {
+  const { rows } = await pool.query(
+    `
+    SELECT *
+    FROM participants
+    WHERE bill_id = $1
+    ORDER BY created_at ASC
+    `,
+    [billId]
+  );
+  return rows;
+};
+
 
 exports.getByGroupCode = async (groupCode) => {
   const { rows } = await pool.query(

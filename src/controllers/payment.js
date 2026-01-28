@@ -1,11 +1,16 @@
 const paymentService = require("../services/payment.js");
 
 exports.confirmPayment = async (req, res) => {
-  const { groupCode, participantId, payerPhone, payerName } = req.body;
+  const { groupCode, payerPhone, payerName } = req.body;
+
+  if (!groupCode || !payerPhone || !payerName) {
+    return res.status(400).json({
+      message: "Missing required fields"
+    });
+  }
 
   const result = await paymentService.payForParticipant({
     groupCode,
-    participantId,
     payerPhone,
     payerName,
     idempotencyKey: req.idempotencyKey
