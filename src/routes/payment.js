@@ -9,7 +9,8 @@ const {
 
 const {
   confirmPayment,
-  declinePayment
+  declinePayment,
+  payByTable
 } = require("../controllers/payment.js");
 
 /**
@@ -32,6 +33,13 @@ router.post(
  // auth,
   validatePhone,
   declinePayment
+);
+router.post(
+  "/pay-by-table",
+  validatePhone,
+  validateName,
+  idempotency,
+  payByTable
 );
 
 module.exports = router;
