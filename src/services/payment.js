@@ -1,4 +1,5 @@
-const Bill = require("../models/Bill");
+const Bill = require("../models/bill");
+console.log("Bill model keys:", Object.keys(Bill));
 const Participant = require("../models/Participant");
 const PaymentAttempt = require("../models/PaymentAttempt");
 const Payment = require("../models/Payment");

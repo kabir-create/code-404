@@ -44,6 +44,26 @@ exports.getBill = async (req, res) => {
   });
 };
 
+
+// const billService = require("../services/bill.js");
+
+/**
+ * Get bill by billId
+ */
+exports.getBillById = async (req, res) => {
+  try {
+    const { billId } = req.params;
+
+    const bill = await billService.getBillById(billId);
+
+    res.json(bill);
+  } catch (err) {
+    res.status(404).json({
+      message: err.message || "Bill not found"
+    });
+  }
+};
+
 exports.getParticipantsByTable = async (req, res) => {
   const { restaurantId, tableNo } = req.query;
 

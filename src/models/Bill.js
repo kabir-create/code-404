@@ -1,4 +1,5 @@
 const { pool } = require("../config/db");
+console.log("🔥 BILL MODEL LOADED FROM:", __filename);
 
 exports.createBill = async ({
   restaurantId,
@@ -47,6 +48,21 @@ exports.getBillById = async (billId) => {
   const { rows } = await pool.query(
     `SELECT * FROM bills WHERE id = $1`,
     [billId]
+  );
+  return rows[0];
+};
+
+exports.getOpenBillByTable = async (restaurantId, tableNo) => {
+  const { rows } = await pool.query(
+    `
+    SELECT *
+    FROM bills
+    WHERE restaurant_id = $1
+      AND table_no = $2
+      AND status = 'OPEN'
+    LIMIT 1
+    `,
+    [restaurantId, tableNo]
   );
   return rows[0];
 };

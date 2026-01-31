@@ -12,7 +12,8 @@ const {
   declinePayment,
   payByTable
 } = require("../controllers/payment.js");
-
+const Controllers = require("../controllers/payment.js");
+console.log("PAYMENT CONTROLLERS:", Controllers);
 /**
  * YES on popup (pay self / pay for friend)
  */

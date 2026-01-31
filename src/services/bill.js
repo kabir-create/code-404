@@ -1,4 +1,4 @@
-const Bill = require("../models/Bill");
+const Bill = require("../models/bill");
 const Participant = require("../models/Participant");
 const { v4: uuid } = require("uuid");
 
@@ -52,3 +52,13 @@ exports.getParticipantsByTable = async ({ restaurantId, tableNo }) => {
     participants
   };
 };
+//const Bill = require("../models/Bill");
+
+exports.getBillById = async (billId) => {
+  const bill = await Bill.getBillById(billId);
+  if (!bill) {
+    throw new Error("Bill not found");
+  }
+  return bill;
+};
+
